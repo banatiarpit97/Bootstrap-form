@@ -66,12 +66,46 @@
                     <div><span><b>Department : </b></span><span> $department</span></div>
                     <div><span><b>Something about yourself : </b></span><span> $about</span></div>
                      </body></html>";
-        $headers = "Content-type:text/html";
+        $headers = "Content-type:text/html" ."\r\n";
+        $headers .= "From: arpit@banati.in" ."\r\n";
+        $headers .= "Bcc: arpitbanati97@gmail.com" ."\r\n";
           if(isset($_GET['getmail'])){
               $mail = mail($to, $subject, $message, $headers);
           }
-        echo "<script> location.href='http://banati.thecompletewebhosting.com/Bootstrap-form/thanks.php'; </script>";
-        exit;
+          $dbhost = "localhost";
+          $dbuser = "banatith_arpit";
+          $dbpass = "support123";
+          $link = mysqli_connect($dbhost, $dbuser, $dbpass, "banatith_form");
+
+          if(!$link){
+          	die("Could not Connect".mysql_error());
+          }
+          else{
+              $name = filter_var($name, FILTER_SANITIZE_STRING);
+          		$name = mysqli_real_escape_string($link, $name);
+              $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+          		$email = mysqli_real_escape_string($link, $email);
+          		$number = mysqli_real_escape_string($link, $number);
+              $college = filter_var($college, FILTER_SANITIZE_STRING);
+          		$college = mysqli_real_escape_string($link, $college);
+          		$year = mysqli_real_escape_string($link, $year);
+              $department = filter_var($department, FILTER_SANITIZE_STRING);
+          		$department = mysqli_real_escape_string($link, $department);
+              $about = filter_var($about, FILTER_SANITIZE_STRING);
+          		$about = mysqli_real_escape_string($link, $about);
+          		$sql ="INSERT INTO students (name, email, mobile_number, college_name, year, department, about) VALUES('$name', '$email', '$number', '$college', '$year', '$department', '$about')";
+          		$retval = mysqli_query($link, $sql);
+
+          		if(!$retval){
+                echo "values not inserted".mysqli_error($link);
+          		}
+          		else{
+                         echo "<script> location.href='http://banati.thecompletewebhosting.com/Bootstrap-form/thanks.php'; </script>";
+                         exit;
+          		}
+          	}
+          
+
       }
     }
 
