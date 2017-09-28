@@ -1,0 +1,32 @@
+[28-Sep-2017 05:24:42 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/banatith/public_html/Bootstrap-form/index.php on line 29
+[28-Sep-2017 05:25:05 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/banatith/public_html/Bootstrap-form/index.php on line 29
+[28-Sep-2017 05:25:13 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/banatith/public_html/Bootstrap-form/index.php on line 29
+[28-Sep-2017 05:27:01 UTC] PHP Parse error:  syntax error, unexpected '$_PHP_SELF' (T_VARIABLE) in /home/banatith/public_html/Bootstrap-form/index.php on line 30
+[28-Sep-2017 05:27:05 UTC] PHP Parse error:  syntax error, unexpected '$_PHP_SELF' (T_VARIABLE) in /home/banatith/public_html/Bootstrap-form/index.php on line 30
+[28-Sep-2017 05:27:21 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/banatith/public_html/Bootstrap-form/index.php on line 30
+[28-Sep-2017 05:32:30 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/banatith/public_html/Bootstrap-form/index.php on line 31
+[28-Sep-2017 05:38:52 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/banatith/public_html/Bootstrap-form/index.php on line 30
+[28-Sep-2017 05:40:27 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/banatith/public_html/Bootstrap-form/index.php on line 29
+[28-Sep-2017 05:52:41 UTC] PHP Parse error:  syntax error, unexpected 'alert' (T_STRING), expecting ',' or ';' in /home/banatith/public_html/Bootstrap-form/index.php on line 47
+[28-Sep-2017 05:52:46 UTC] PHP Parse error:  syntax error, unexpected 'alert' (T_STRING), expecting ',' or ';' in /home/banatith/public_html/Bootstrap-form/index.php on line 47
+[28-Sep-2017 06:00:58 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/banatith/public_html/Bootstrap-form/index.php on line 50
+[28-Sep-2017 06:01:04 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/banatith/public_html/Bootstrap-form/index.php on line 50
+[28-Sep-2017 06:01:09 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/banatith/public_html/Bootstrap-form/index.php on line 50
+[28-Sep-2017 06:03:20 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/banatith/public_html/Bootstrap-form/index.php on line 51
+[28-Sep-2017 06:03:24 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/banatith/public_html/Bootstrap-form/index.php on line 51
+[28-Sep-2017 06:03:55 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/banatith/public_html/Bootstrap-form/index.php on line 51
+[28-Sep-2017 06:04:09 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/banatith/public_html/Bootstrap-form/index.php on line 51
+[28-Sep-2017 06:07:32 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/banatith/public_html/Bootstrap-form/index.php on line 51
+[28-Sep-2017 06:07:55 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/banatith/public_html/Bootstrap-form/index.php on line 51
+[28-Sep-2017 06:09:21 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/banatith/public_html/Bootstrap-form/index.php on line 50
+[28-Sep-2017 06:09:45 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/banatith/public_html/Bootstrap-form/index.php on line 50
+[28-Sep-2017 06:10:09 UTC] PHP Parse error:  syntax error, unexpected 'text' (T_STRING), expecting ',' or ';' in /home/banatith/public_html/Bootstrap-form/index.php on line 50
+[28-Sep-2017 07:44:16 UTC] PHP Parse error:  syntax error, unexpected '$mail' (T_VARIABLE) in /home/banatith/public_html/Bootstrap-form/index.php on line 54
+[28-Sep-2017 07:44:16 UTC] PHP Parse error:  syntax error, unexpected '$mail' (T_VARIABLE) in /home/banatith/public_html/Bootstrap-form/index.php on line 54
+[28-Sep-2017 07:45:26 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/banatith/public_html/Bootstrap-form/index.php on line 50
+[28-Sep-2017 07:45:33 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/banatith/public_html/Bootstrap-form/index.php on line 50
+[28-Sep-2017 07:50:37 UTC] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/banatith/public_html/Bootstrap-form/index.php on line 52
+[28-Sep-2017 07:50:57 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/banatith/public_html/Bootstrap-form/index.php on line 52
+[28-Sep-2017 07:51:05 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/banatith/public_html/Bootstrap-form/index.php on line 52
+[28-Sep-2017 07:55:32 UTC] PHP Parse error:  syntax error, unexpected '$college' (T_VARIABLE) in /home/banatith/public_html/Bootstrap-form/index.php on line 52
+[28-Sep-2017 08:02:33 UTC] PHP Parse error:  syntax error, unexpected '(', expecting variable (T_VARIABLE) or '$' in /home/banatith/public_html/Bootstrap-form/index.php on line 70

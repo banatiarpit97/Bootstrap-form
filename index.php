@@ -24,15 +24,70 @@
   </div>
   <div class="row">
     <div class="formPart">
+      <?php
+      if($_GET['submit']){
+        if(!$_GET["Studentname"]){
+          $errors .= "<p>Enter your name<p>";
+        }
+        if(!($_GET['email'])){
+          $errors .= "<p>Enter your email<p>";
+        }
+        if(!($_GET['number'])){
+          $errors .= "<p>Enter your Mobile Number`<p>";
+        }
+        if(!($_GET['year'])){
+          $errors .= "<p>Enter your year<p>";
+        }
+        if(!($_GET['department'])){
+          $errors .= "<p>Enter your departemnt<p>";
+        }
 
-          <form class="" action="" method="post">
+
+      if($errors){
+        echo "<div class = 'alert alert-danger'>$errors</div>";
+      }
+      else{
+        $name = $_GET['Studentname'];
+        $email = $_GET['email'];
+        $number = $_GET['number'];
+        $college = $_GET['college'];
+        $year = $_GET['year'];
+        $department = $_GET['department'];
+        $about = $_GET['about'];
+        $to = $email;
+        $subject = "your Class Form response";
+        $message = "<html><body>
+                    <h3>Your 'Class Form' response</h3>
+                    <div><span><b>Name : </b></span><span> $name</span></div>
+                    <div><span><b>Email : </b></span><span> $email</span></div>
+                    <div><span><b>Mobile Number : </b></span><span> $number</span></div>
+                    <div><span><b>College Name : </b></span><span> $college</span></div>
+                    <div><span><b>Year : </b></span><span> $year</span></div>
+                    <div><span><b>Department : </b></span><span> $department</span></div>
+                    <div><span><b>Something about yourself : </b></span><span> $about</span></div>
+                     </body></html>";
+        $headers = "Content-type:text/html";
+          if(isset($_GET['getmail'])){
+              $mail = mail($to, $subject, $message, $headers);
+          }
+        echo "<script> location.href='http://banati.thecompletewebhosting.com/Bootstrap-form/thanks.php'; </script>";
+        exit;
+      }
+    }
+
+      ?>
+
+
+
+
+          <form method="get" action="" name="classform" id="form">
           <div class="form-group">
             <label for="">Name <span class="required">*</span></label>
-            <input type="text" name="name" class="form-control" ng-model="name">
+            <input type="text" name="Studentname" class="form-control" ng-model="name">
           </div>
 
           <div class="form-group">
-            <label for="">Email </label>
+            <label for="">Email <span class="required">*</span></label>
             <input type="email" name="email" class="form-control" ng-model="emailadd">
           </div>
 
@@ -47,7 +102,7 @@
           </div>
 
           <div class="form-group">
-            <label for="">Year</label> <br>
+            <label for="">Year <span class="required">*</span></label> <br>
             <input type="radio" name="year" value="1" ng-model = "year">1 <br>
             <input type="radio" name="year" value="2" ng-model = "year">2 <br>
             <input type="radio" name="year" value="3" ng-model = "year">3 <br>
@@ -55,7 +110,7 @@
           </div>
 
           <div class="form-group">
-            <label for="">Department</label> <br>
+            <label for="">Department <span class="required">*</span></label> <br>
             <input type="radio" name="department" value="CSE" ng-model="department">CSE <br>
             <input type="radio" name="department" value="IT" ng-model="department">IT <br>
             <input type="radio" name="department" value="ECE" ng-model="department">ECE <br>
@@ -66,7 +121,7 @@
 
           <div class="form-group">
             <label>Something about yourself</label>
-              <textarea name="name" rows="5" cols="40" class="form-control" ng-model = "about"></textarea>
+              <textarea name="about" rows="5" cols="40" class="form-control" ng-model = "about"></textarea>
           </div>
 
           <div class="row checkboxes">
@@ -84,7 +139,7 @@
           </div>
 
           <div class="buttons">
-            <input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg submit">
+            <input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg submit" >
             <input type="reset" name="reset" value="Reset" class="btn btn-warning btn-lg reset">
           </div>
 
@@ -163,6 +218,9 @@
 
 
 
+
+
+
 <!--Script FIles included here -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
@@ -186,7 +244,6 @@
       $(".formPart").removeClass("col-md-6");
     }
   })
-  console.log($(".previewCheck").is(":checked"))
 
 </script>
 </body>
