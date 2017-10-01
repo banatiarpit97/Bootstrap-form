@@ -63,10 +63,59 @@ input[type='radio']{
   font-weight: bold;
 }
 
-.responsePart .col-md-6{
+.responsePart .col-xs-6{
   text-align: left !important;
 }
 
 .responsePart .row{
   margin-left: 25px !important;
+}
+
+@media(max-width: 900px){
+  body{
+    padding: 0 5%;
+  }
+  .header{
+    padding: 0 !important;
+  }
+  .responsePart .row{
+  margin-left: 0 !important;
+  }
+  .responsePart .col-xs-6{
+  padding: 0;
+  }
+  .center{
+    font-size: 1.1em;
+  }
+}
+@media(max-width: 450px){
+  .submit, .reset{
+  width: 120px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 2%;
+}
+.submit{
+  margin-right: 40px;
+}
+.description h3{
+font-size: 21px;
+}
+.header h1{
+ 
+  font-size: 42px;
+}
+}
+@media(max-width: 360px){
+  .submit, .reset{
+  width: 100px;
+  height: 40px;
+  font-size: 21px;
+  font-weight: bold;
+  padding-top: 2%;
+}
+.submit{
+  margin-right: 30px;
+}
 }

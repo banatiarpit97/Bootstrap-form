@@ -111,13 +111,62 @@
 
       ?>
 
+<!--     <?php  
+//export.php  
+    $dbhost = "localhost";
+          $dbuser = "banatith_arpit";
+          $dbpass = "support123";
+$link = mysqli_connect($dbhost, $dbuser, $dbpass, "banatith_form");
+$output = '';
+if(isset($_GET["submit"]))
+{
+ $query = "SELECT * FROM students";
+ $result = mysqli_query($link, $query);
+ if(mysqli_num_rows($result) > 0)
+ {
+  $output .= '
+   <table class="table" bordered="1">  
+                    <tr>  
+                         <th>Name</th>  
+                         <th>Email Address</th>  
+                         <th>Mobile Number</th>  
+                         <th>Colllege Name</th>
+                         <th>Year</th>
+                         <th>Department</th>
+                         <th>About</th>
+
+                    </tr>
+  ';
+  while($row = mysqli_fetch_array($result))
+  {
+   $output .= '
+    <tr>  
+                         <td>'.$row["name"].'</td>  
+                         <td>'.$row["email"].'</td>  
+                         <td>'.$row["mobile_number"].'</td>  
+                         <td>'.$row["college_name"].'</td>  
+                         <td>'.$row["year"].'</td>
+                         <td>'.$row["department"].'</td>
+                         <td>'.$row["about"].'</td>
+
+                    </tr>
+   ';
+  }
+  $output .= '</table>';
+  header('Content-Type: application/xls');
+  header("Content-Disposition: attachment; filename=downloa.xls");
+  echo $output;
+ }
+}
+?>  --> 
+
 
 
 
           <form method="get" action="" name="classform" id="form">
           <div class="form-group">
             <label for="">Name <span class="required">*</span></label>
-            <input type="text" name="Studentname" class="form-control" ng-model="name">
+            <input type="text" name="Studentname" class="form-control" ng-model="name" >
           </div>
 
           <div class="form-group">
@@ -159,13 +208,13 @@
           </div>
 
           <div class="row checkboxes">
-            <div class="col-sm-6">
+            <div class="col-xs-6">
           <div class="checkbox getEmail">
             <label><input type="checkbox" name="getmail" value="getmail" class="getEmailCheck">Receive email of your response</label>
           </div>
           </div>
 
-          <div class="col-sm-6">
+          <div class="col-xs-6">
           <div class="checkbox preview">
             <label><input type="checkbox" name="preview" value="preview" class="previewCheck" >Preview your response</label>
           </div>
@@ -183,64 +232,64 @@
       <div class="hidden responsePart">
         <h1 class="response">Your Response</h1>
         <div class="row">
-          <div class="col-md-6 center">
+          <div class="col-xs-6 center">
             <span class="reslabel">Name : </span>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <span ng-bind="name"></span>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 center">
+          <div class="col-xs-6 center">
             <span class="reslabel">Email : </span>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <span ng-bind="emailadd"></span>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 center">
+          <div class="col-xs-6 center">
             <span class="reslabel">Mobile Number : </span>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <span ng-bind="mobilenumber"></span>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 center">
+          <div class="col-xs-6 center">
             <span class="reslabel">College Name : </span>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <span ng-bind="collegename"></span>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 center">
+          <div class="col-xs-6 center">
             <span class="reslabel">Year : </span>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <span ng-bind="year"></span>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 center">
+          <div class="col-xs-6 center">
             <span class="reslabel">Department : </span>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <span ng-bind="department"></span>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 center">
+          <div class="col-xs-6 center">
             <span class="reslabel">Something about yourself : </span>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6">
             <span ng-bind="about"></span>
           </div>
         </div>
